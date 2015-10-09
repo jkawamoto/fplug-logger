@@ -1,0 +1,3 @@
+[submodule "lib/pyfplug"]
+	path = lib/pyfplug
+	url = https://github.com/hasegaw/pyfplug.git

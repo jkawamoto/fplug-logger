@@ -8,9 +8,9 @@
 # http://opensource.org/licenses/mit-license.php
 #
 #----------------------------------------------------------
-# to run fplug-logger as a container on Raspberry Pi.
+# to run fplug-logger as a container
 #
-FROM resin/rpi-raspbian:wheezy-2015-10-07
+FROM ubuntu
 MAINTAINER Junpei Kawamoto <kawamoto.junpei@gmail.com>
 
 # Install a dependent library.
@@ -26,4 +26,4 @@ ENV PYTHONPATH pyfplug
 # Add the main script.
 ADD bin .
 
-CMD ./main.py
+ENTRYPOINT ["./entrypoint.sh"]

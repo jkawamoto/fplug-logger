@@ -10,16 +10,11 @@
 #
 """ Continuously reporting data from fplug.
 """
-import os
-import sys
-ROOTPATH = os.path.dirname(__file__)
-LIBPATH = os.path.join(ROOTPATH, "../lib/pyfplug/")
-sys.path.append(LIBPATH)
-
 import argparse
 import contextlib
 import json
 import pyfplug
+import sys
 import time
 
 DEFAULT_DEVICE = "/dev/rfcomm0"
@@ -40,7 +35,8 @@ def run(path=DEFAULT_DEVICE, interval=DEFAULT_INTERVAL, output=sys.stdout):
                 temperature=dev.get_temperature(),
                 power=dev.get_power_realtime(),
                 humidity=dev.get_humidity(),
-                illuminance=dev.get_illuminance()
+                illuminance=dev.get_illuminance(),
+                time=time.time()
             ), output)
             output.write("\n")
             time.sleep(interval)
@@ -55,7 +51,7 @@ def main():
         help="Path to an RFCOMM device. (default: /dev/rfcomm0)")
     parser.add_argument(
         "--interval", type=int, default=DEFAULT_INTERVAL,
-        help="interval seconds of reporting.")
+        help="interval seconds of reporting. (default: 60sec)")
     parser.add_argument(
         "--output", type=argparse.FileType("w"), default=sys.stdout,
         help="Output. (default: stdout)")

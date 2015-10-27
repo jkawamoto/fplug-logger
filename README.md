@@ -21,7 +21,7 @@ $ docker pull jkawamoto/rpi-fplug-logger
 
 ## Useage
 ```
-$ docker run -d -v /dev/rfcomm0:/dev/rfcomm0 \
+$ docker run -d -v /dev/rfcomm0:/dev/rfcomm0 --privileged \
     jkawamoto/fplug-logger [--interval INTERVAL] [--output OUTPUT] [path]
 ```
 where

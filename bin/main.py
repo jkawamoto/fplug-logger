@@ -16,9 +16,12 @@ import json
 import pyfplug
 import sys
 import time
+from logging import getLogger, StreamHandler, DEBUG
 
 DEFAULT_DEVICE = "/dev/rfcomm0"
 DEFAULT_INTERVAL = 60
+
+logger = getLogger(__name__)
 
 
 def run(path=DEFAULT_DEVICE, interval=DEFAULT_INTERVAL, output=sys.stdout):
@@ -29,17 +32,25 @@ def run(path=DEFAULT_DEVICE, interval=DEFAULT_INTERVAL, output=sys.stdout):
       interval: Reporting interval. Unit is second. (default: 60sec)
       output: Writable object to output. (default: stdout)
     """
-    with contextlib.closing(pyfplug.FPlugDevice(path)) as dev:
-        while True:
-            json.dump(dict(
-                temperature=dev.get_temperature(),
-                power=dev.get_power_realtime(),
-                humidity=dev.get_humidity(),
-                illuminance=dev.get_illuminance(),
-                time=time.time()
-            ), output)
-            output.write("\n")
-            time.sleep(interval)
+    while True:
+        try:
+            with contextlib.closing(pyfplug.FPlugDevice(path)) as dev:
+                while True:
+                    json.dump(dict(
+                        temperature=dev.get_temperature(),
+                        power=dev.get_power_realtime(),
+                        humidity=dev.get_humidity(),
+                        illuminance=dev.get_illuminance(),
+                        time=time.time()
+                    ), output)
+                    output.write("\n")
+                    time.sleep(interval)
+
+        except KeyboardInterrupt:
+            raise
+
+        except Exception: # pylint: disable=broad-except
+            logger.exception("Untracked exception occurred.")
 
 
 def main():
@@ -58,7 +69,12 @@ def main():
 
     run(**vars(parser.parse_args()))
 
+
 if __name__ == "__main__":
+    handler = StreamHandler()
+    handler.setLevel(DEBUG)
+    logger.setLevel(DEBUG)
+    logger.addHandler(handler)
     try:
         main()
     except KeyboardInterrupt:

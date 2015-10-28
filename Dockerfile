@@ -14,7 +14,8 @@ FROM ubuntu
 MAINTAINER Junpei Kawamoto <kawamoto.junpei@gmail.com>
 
 # Install a dependent library.
-RUN apt-get update && apt-get install -y git python-serial
+RUN apt-get update && apt-get install -y git python-serial && \
+    apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/
 
 # Change the working directory.
 WORKDIR /root

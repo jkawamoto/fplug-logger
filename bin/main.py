@@ -2,7 +2,7 @@
 #
 # main.py
 #
-# Copyright (c) 2015 Junpei Kawamoto
+# Copyright (c) 2015-2016 Junpei Kawamoto
 #
 # This software is released under the MIT License.
 #
@@ -41,7 +41,7 @@ def run(path=DEFAULT_DEVICE, interval=DEFAULT_INTERVAL, output=sys.stdout):
                         power=dev.get_power_realtime(),
                         humidity=dev.get_humidity(),
                         illuminance=dev.get_illuminance(),
-                        time=time.time()
+                        time=int(time.time())
                     ), output)
                     output.write("\n")
                     time.sleep(interval)

@@ -56,7 +56,8 @@ def run(path=DEFAULT_DEVICE, interval=DEFAULT_INTERVAL, output=sys.stdout):
 def main():
     """ The main function.
     """
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(
         "path", nargs="?", default=DEFAULT_DEVICE,
         help="Path to an RFCOMM device. (default: /dev/rfcomm0)")

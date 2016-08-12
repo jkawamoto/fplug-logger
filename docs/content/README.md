@@ -36,6 +36,7 @@ $ docker run -d -v /dev/rfcomm0:/dev/rfcomm0 --privileged \
     jkawamoto/fplug-logger [--interval INTERVAL] [--output OUTPUT] [path]
 ```
 where
+
 * positional arguments:
   * path: Path to an RFCOMM device. (default: /dev/rfcomm0)
 * optional arguments:

@@ -1,0 +1,10 @@
+baseurl = "https://jkawamoto.github.io/fplug-logger/"
+languageCode = "en-us"
+title = "Fplug Logger"
+theme = "purehugo"
+Paginate = 10
+
+[params]
+  githubName = "jkawamoto/fplug-logger"
+  description = "Continuously reporting data from Fujitsu's fplug."
+  google_analytics = "UA-82315630-1"

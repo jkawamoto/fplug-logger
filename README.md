@@ -1,6 +1,7 @@
 # A Logger for F-Plug
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Code Climate](https://codeclimate.com/github/jkawamoto/fplug-logger/badges/gpa.svg)](https://codeclimate.com/github/jkawamoto/fplug-logger)
+[![Release](https://img.shields.io/badge/release-0.9.0-brightgreen.svg)](https://github.com/jkawamoto/fplug-logger/releases/)
 [![Dockerhub](https://img.shields.io/badge/dockerhub-jkawamoto%2Ffplug--logger-blue.svg)](https://hub.docker.com/r/jkawamoto/fplug-logger/)
 [![Image information](https://images.microbadger.com/badges/image/jkawamoto/fplug-logger.svg)](http://microbadger.com/images/jkawamoto/fplug-logger)
 [![Dockerhub](https://img.shields.io/badge/dockerhub-jkawamoto%2Frpi--fplug--logger-blue.svg)](https://hub.docker.com/r/jkawamoto/rpi-fplug-logger/)

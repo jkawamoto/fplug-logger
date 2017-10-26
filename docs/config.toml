@@ -8,3 +8,4 @@ Paginate = 10
   githubName = "jkawamoto/fplug-logger"
   description = "Continuously reporting data from Fujitsu's fplug."
   google_analytics = "UA-82315630-1"
+  image = "img/fplug.png"

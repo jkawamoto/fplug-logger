@@ -7,7 +7,7 @@ weight: 1
 description: >-
   Continuously reporting data from Fujitsu's fplug.
 ---
-[{{%img "http://img.shields.io/badge/license-MIT-blue.svg?style=flat" "MIT License" 78 20 %}}](https://github.com/jkawamoto/fplug-logger/blob/master/LICENSE)
+[{{%img "https://img.shields.io/badge/license-MIT-blue.svg?style=flat" "MIT License" 78 20 %}}](https://github.com/jkawamoto/fplug-logger/blob/master/LICENSE)
 [{{%img "https://codeclimate.com/github/jkawamoto/fplug-logger/badges/gpa.svg" "Code Climate" 110 20 %}}](https://codeclimate.com/github/jkawamoto/fplug-logger)
 [{{%img "https://img.shields.io/badge/release-0.9.0-brightgreen.svg" "Release" 88 20 %}}](https://github.com/jkawamoto/fplug-logger/releases/)
 [{{%img "https://img.shields.io/badge/dockerhub-jkawamoto%2Ffplug--logger-blue.svg" "Dockerhub" 210 20 %}}](https://hub.docker.com/r/jkawamoto/fplug-logger/)

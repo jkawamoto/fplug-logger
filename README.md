@@ -42,4 +42,4 @@ where
 If you run this on Raspberry Pi, use `jkawamoto/rpi-fplug-logger` instead of `jkawamoto/fplug-logger`.
 
 ## License
-This software is released under the MIT License, see LICENSE.
+This software is released under the MIT License, see [LICENSE](LICENSE).

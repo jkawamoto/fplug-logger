@@ -1,6 +1,6 @@
 [submodule "lib/pyfplug"]
 	path = lib/pyfplug
 	url = https://github.com/hasegaw/pyfplug.git
-[submodule "docs/themes/purehugo"]
-	path = docs/themes/purehugo
-	url = https://github.com/dplesca/purehugo.git
+[submodule "docs/themes/hugo-alabaster-theme"]
+	path = docs/themes/hugo-alabaster-theme
+	url = https://github.com/jkawamoto/hugo-alabaster-theme.git
